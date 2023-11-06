@@ -223,6 +223,10 @@ Press any other key to return
                     if op2=="4":
                         print("")
                         op3=input("Input desired item. ")
+                        while op3 not in self.lista:
+                            print("Referenced item not present in "+self.name)
+                            op3=input("Input targeted item's name. ")
+                            continue
                         print("The item's index is: "+str(self.lista.index(op3)))
                         continue
                     else:
